@@ -11,7 +11,7 @@ from setuptools import find_packages, find_namespace_packages
 # Do NOT import your package from your setup.py
 
 _nsp = 'joker'
-_pkg = 'interfaces'
+_pkg = 'redis'
 _names = [_nsp, _pkg]
 _names = [s for s in _names if s]
 
@@ -47,18 +47,18 @@ def _find_packages():
 
 
 config = {
-    'name': 'joker-interfaces',
+    'name': 'joker-redis',
     'version': _find_version(),
-    'description': 'simple interfaces for messaging and storage',
+    'description': 'redis based utilities',
     'keywords': '',
-    'url': 'https://github.com/frozflame/joker-interfaces',
+    'url': 'https://github.com/frozflame/joker-redis',
     'author': 'frozflame',
     'author_email': 'frozflame@outlook.com',
     'license': "GNU General Public License (GPL)",
     'packages': _find_packages(),
     'zip_safe': False,
     'install_requires': read("requirements.txt"),
-    # 'entry_points': {'console_scripts': ['joker-interfaces = joker.interfaces.__main__:run']},
+    # 'entry_points': {'console_scripts': ['joker-redis = joker.redis.__main__:run']},
     'classifiers': [
         'Programming Language :: Python',
         'Programming Language :: Python :: 3',

@@ -7,13 +7,13 @@ import volkanic
 from volkanic.introspect import find_all_plain_modules
 
 dotpath_prefixes = [
-    'joker.interfaces.',
+    'joker.redis.',
     'tests.',
 ]
 
 
 class _GI(volkanic.GlobalInterface):
-    package_name = 'joker.interfaces'
+    package_name = 'joker.redis'
 
 
 def _check_prefix(path):

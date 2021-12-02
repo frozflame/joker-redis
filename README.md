@@ -1,4 +1,4 @@
-joker-interfaces
-================
+joker-redis
+==========
 
-simple interfaces for messaging and storage
+redis-based utilities
