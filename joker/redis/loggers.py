@@ -6,9 +6,8 @@ import traceback
 from logging import Handler, LogRecord
 
 import orjson
-from joker.environ.errors import ErrorInfo
-
 from redis import Redis
+from volkanic.introspect import ErrorInfo
 
 
 class RedisHandler(Handler):
