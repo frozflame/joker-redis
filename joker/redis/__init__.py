@@ -2,6 +2,7 @@
 # coding: utf-8
 
 __version__ = '0.0.3'
+__author__ = 'frozflame'
 
-from joker.redis.loggers import ErrorInterface, RedisHandler
 from joker.redis.extended import RedisExtended
+from joker.redis.loggers import ErrorInterface, RedisHandler
