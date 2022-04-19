@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # coding: utf-8
 
-__version__ = '0.0.3'
+__version__ = '0.0.4'
 __author__ = 'frozflame'
 
 from joker.redis.extended import RedisExtended
