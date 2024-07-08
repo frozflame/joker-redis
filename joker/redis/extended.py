@@ -30,7 +30,7 @@ class RedisExtended(Redis):
 
     def rekom_getsetnx(self, name, value):
         # https://groups.google.com/d/msg/redis-db/QM15DH3SI6I/euJpdYJHTrcJ
-        tmp_name = '_rekom_getsetnx_{}'.format(random.randint(1, 2 ** 60))
+        tmp_name = "_rekom_getsetnx_{}".format(random.randint(1, 2**60))
         pipe = self.pipeline()
         pipe.get(name)
         pipe.set(tmp_name, value)
@@ -40,11 +40,13 @@ class RedisExtended(Redis):
         return results[0]
 
     def __repr__(self):
-        pool = getattr(self, 'connection_pool')
-        kwargs = getattr(pool, 'connection_kwargs', {})
-        params = OrderedDict([
-            ('host', kwargs.get('host')),
-            ('port', kwargs.get('port')),
-            ('db', kwargs.get('db')),
-        ])
+        pool = getattr(self, "connection_pool")
+        kwargs = getattr(pool, "connection_kwargs", {})
+        params = OrderedDict(
+            [
+                ("host", kwargs.get("host")),
+                ("port", kwargs.get("port")),
+                ("db", kwargs.get("db")),
+            ]
+        )
         return represent(self, params)
